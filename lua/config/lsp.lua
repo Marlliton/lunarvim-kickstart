@@ -1,3 +1,11 @@
+lvim.lsp.installer.setup.ensure_installed = {
+  'tsserver',
+  'jsonls',
+  'tailwindcss',
+  'cssls',
+  'html',
+  'stylelint_lsp'
+}
 -- local lvim_lsp = require('lvim.lsp')
 -- local ts = require('typescript')
 
