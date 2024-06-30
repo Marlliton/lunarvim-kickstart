@@ -1,3 +1,6 @@
+local linters = require "lvim.lsp.null-ls.linters"
+local formatters = require "lvim.lsp.null-ls.formatters"
+
 lvim.lsp.installer.setup.ensure_installed = {
   'tsserver',
   'jsonls',
@@ -6,7 +9,73 @@ lvim.lsp.installer.setup.ensure_installed = {
   'html',
   'stylelint_lsp'
 }
--- local lvim_lsp = require('lvim.lsp')
+
+formatters.setup {
+  {
+    name = "prettier",
+    ---@usage arguments to pass to the formatter
+    -- these cannot contain whitespace
+    -- options such as `--line-width 80` become either `{"--line-width", "80"}` or `{"--line-width=80"}`
+    args = { "--print-width", "100" },
+    ---@usage only start in these filetypes, by default it will attach to all filetypes it supports
+    filetypes = {
+      "typescript",
+      "typescriptreact",
+      "javascript",
+      "javascriptreact",
+      "html",
+      "css",
+      "scss",
+      "yaml",
+      "markdown",
+      "json"
+    },
+  },
+}
+
+
+linters.setup {
+  {
+    name = "eslint",
+    filetypes = {
+      "typescript",
+      "typescriptreact",
+      "javascript",
+      "javascriptreact",
+      "html",
+      "css",
+      "scss",
+      "yaml",
+      "markdown",
+
+    }
+  },
+}
+
+-- formatters.setup({
+--   {
+--     name = "prettierd",
+--     filetypes = {
+--       "javascript",
+--       "javascriptreact",
+--       "typescript",
+--       "typescriptreact",
+--       "vue",
+--       "css",
+--       "scss",
+--       "less",
+--       "html",
+--       "yaml",
+--       "markdown",
+--       "markdown.mdx",
+--       "graphql",
+--       "handlebars",
+--       "json",
+--     }
+--   },
+
+-- })
+-- -- local lvim_lsp = require('lvim.lsp')
 -- local ts = require('typescript')
 
 -- -- configure tsserver server manually.
@@ -82,4 +151,7 @@ lvim.lsp.installer.setup.ensure_installed = {
 -- lvim.lsp.diagnostics.float.focusable = true
 
 -- lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"
+-- table.insert(lvim.builtin.cmp.sources, 1, { name = "copilot" })
+-- table.insert(lvim.builtin.cmp.sources, 1, { name = "copilot" })
+-- table.insert(lvim.builtin.cmp.sources, 1, { name = "copilot" })
 -- table.insert(lvim.builtin.cmp.sources, 1, { name = "copilot" })
