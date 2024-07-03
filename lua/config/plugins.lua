@@ -7,7 +7,7 @@ lvim.plugins = {
   { "lunarvim/horizon.nvim" },
   { "tomasr/molokai" },
   { "ayu-theme/ayu-vim" },
-
+  { 'mg979/vim-visual-multi' },
   {
     "folke/trouble.nvim",
     opts = {}, -- for default options, refer to the configuration section for custom setup.
@@ -30,7 +30,12 @@ lvim.plugins = {
       },
     },
   },
-
+  {
+    "windwp/nvim-ts-autotag",
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
+  },
   -- busca de arquvios
   {
     'nvim-telescope/telescope-frecency.nvim',
