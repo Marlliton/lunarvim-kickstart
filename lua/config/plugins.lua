@@ -7,9 +7,13 @@ lvim.plugins = {
   { "lunarvim/horizon.nvim" },
   { "tomasr/molokai" },
   { "ayu-theme/ayu-vim" },
-  { 'mg979/vim-visual-multi' },
   { 'tpope/vim-surround' },
   { 'echasnovski/mini.nvim',   version = false },
+  {
+    "brenton-leighton/multiple-cursors.nvim",
+    version = "*", -- Use the latest tagged version
+    opts = {},     -- This causes the plugin setup function to be called
+  },
   {
     "windwp/nvim-ts-autotag",
     dependencies = "nvim-treesitter/nvim-treesitter",

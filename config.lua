@@ -5,14 +5,18 @@
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
 
-require("setup.mininotify")
-require("setup.vimconfig")
+require('setup.mininotify')
+require('setup.vimconfig')
 
 reload('config.plugins')
 reload('config.colorscheme')
 reload('config.dashboard')
-reload("config.autocmds")
-reload("config.keymaps")
+reload('config.autocmds')
+reload('config.keymaps')
 reload('config.lsp')
 reload('config.telescope')
 reload('config.statusline')
+
+
+
+-- require
