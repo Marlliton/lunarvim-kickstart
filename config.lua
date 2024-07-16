@@ -4,10 +4,9 @@
 -- Forum: https://www.reddit.com/r/lunarvim/
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
-vim.opt.timeoutlen = 500
-vim.opt.relativenumber = true
-lvim.builtin.treesitter.autotag.enable = true
-table.insert(lvim.builtin.project.patterns, 0, "!>packages")
+
+require("setup.mininotify")
+require("setup.vimconfig")
 
 reload('config.plugins')
 reload('config.colorscheme')
@@ -17,4 +16,3 @@ reload("config.keymaps")
 reload('config.lsp')
 reload('config.telescope')
 reload('config.statusline')
-

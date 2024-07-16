@@ -9,6 +9,17 @@ lvim.plugins = {
   { "ayu-theme/ayu-vim" },
   { 'mg979/vim-visual-multi' },
   { 'tpope/vim-surround' },
+  { 'echasnovski/mini.nvim',   version = false },
+  {
+    "windwp/nvim-ts-autotag",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    config = function()
+      require('nvim-ts-autotag').setup({
+      })
+    end,
+    lazy = true,
+    event = "VeryLazy"
+  },
   {
     "folke/trouble.nvim",
     opts = {}, -- for default options, refer to the configuration section for custom setup.
