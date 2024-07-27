@@ -8,11 +8,21 @@ lvim.plugins = {
   { "tomasr/molokai" },
   { "ayu-theme/ayu-vim" },
   { 'tpope/vim-surround' },
-  { 'echasnovski/mini.nvim',   version = false },
+  -- { 'echasnovski/mini.nvim',   version = false },
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {},
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+      'rcarriga/nvim-notify',
+    }
+  },
   {
     "brenton-leighton/multiple-cursors.nvim",
-    version = "*", -- Use the latest tagged version
-    opts = {},     -- This causes the plugin setup function to be called
+    version = "*",
+    opts = {},
   },
   {
     "windwp/nvim-ts-autotag",
@@ -25,8 +35,13 @@ lvim.plugins = {
     event = "VeryLazy"
   },
   {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {}
+  },
+  {
     "folke/trouble.nvim",
-    opts = {}, -- for default options, refer to the configuration section for custom setup.
+    opts = {},
     cmd = "Trouble",
     keys = {
       {

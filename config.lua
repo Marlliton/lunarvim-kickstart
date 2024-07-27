@@ -5,8 +5,9 @@
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
 
-require('setup.mininotify')
+-- require('setup.mininotify')
 require('setup.vimconfig')
+require('setup.noice')
 
 reload('config.plugins')
 reload('config.colorscheme')
@@ -16,7 +17,5 @@ reload('config.keymaps')
 reload('config.lsp')
 reload('config.telescope')
 reload('config.statusline')
+reload('config.nvimtree')
 
-
-
--- require

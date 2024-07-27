@@ -19,4 +19,5 @@ lvim.builtin.which_key.mappings["f"]["s"] = { "<cmd>Telescope grep_string<cr>", 
 lvim.builtin.which_key.mappings["f"]["G"] = { "<cmd>Telescope git_files<cr>", "Git Files" }
 lvim.builtin.which_key.mappings["f"]["a"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Current Buffer" }
 lvim.builtin.which_key.mappings["p"] = { "<cmd>Telescope projects<cr>", "Recent Projects" }
+lvim.builtin.which_key.mappings["f"]["t"] = { "<cmd>TodoTelescope<cr>", "Todo" }
 -- Telescope ends
