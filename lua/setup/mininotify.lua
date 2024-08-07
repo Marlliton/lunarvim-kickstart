@@ -1,5 +1,5 @@
--- local mininotify = require('mini.notify')
+local mininotify = require('mini.notify')
 
--- mininotify.setup()
+mininotify.setup()
 
--- return mininotify
+return mininotify

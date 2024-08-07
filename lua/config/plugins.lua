@@ -8,17 +8,7 @@ lvim.plugins = {
   { "tomasr/molokai" },
   { "ayu-theme/ayu-vim" },
   { 'tpope/vim-surround' },
-  -- { 'echasnovski/mini.nvim',   version = false },
-  {
-    "folke/noice.nvim",
-    event = "VeryLazy",
-    opts = {},
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
-      'rcarriga/nvim-notify',
-    }
-  },
+  { 'echasnovski/mini.nvim',   version = false },
   {
     "brenton-leighton/multiple-cursors.nvim",
     version = "*",
