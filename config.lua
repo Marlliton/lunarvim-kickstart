@@ -5,7 +5,6 @@
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
 
-require('setup.mininotify')
 require('setup.vimconfig')
 
 reload('config.plugins')

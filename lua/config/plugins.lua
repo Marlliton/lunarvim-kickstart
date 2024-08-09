@@ -8,7 +8,11 @@ lvim.plugins = {
   { "tomasr/molokai" },
   { "ayu-theme/ayu-vim" },
   { 'tpope/vim-surround' },
-  { 'echasnovski/mini.nvim',   version = false },
+  -- { 'echasnovski/mini.nvim',   version = false },
+  {
+    "j-hui/fidget.nvim",
+    opts = {},
+  },
   {
     "brenton-leighton/multiple-cursors.nvim",
     version = "*",
